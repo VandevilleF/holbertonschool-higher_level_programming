@@ -10,11 +10,8 @@ def uppercase(str):
     str: A string in uppercase
 
     """
-    
     for c in str:
-        if 97 <= ord(c) <= 122:
+        if ord('a') <= ord(c) <= ord('z'):
             c = chr(ord(c) - 32)
-            
         print("{}".format(c), end='')
     print("")
-    
