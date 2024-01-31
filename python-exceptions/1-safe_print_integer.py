@@ -7,3 +7,7 @@ def safe_print_integer(value):
         return False
     except TypeError:
         return False
+    # Other solution
+    # except Exception
+    # except Exception as e ('e' is variable where last
+    # step was store)
