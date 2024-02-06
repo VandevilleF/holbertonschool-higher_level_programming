@@ -4,6 +4,8 @@ matrix must be a list of lists of integers or floats
 Each row of the matrix must be of the same size
 div must be a number (int or float), div can't be equal to 0
 Elements of matrix be divided by div, rounded to 2 decimal"""
+
+
 def matrix_divided(matrix, div):
     """
     divides all elements of a matrix by div
@@ -22,10 +24,10 @@ def matrix_divided(matrix, div):
 
     for row in matrix:
         if len(row) != len(matrix[0]):
-            raise TypeError ("Each row of the matrix must have the same size")
+            raise TypeError("Each row of the matrix must have the same size")
 
-    for i in range (len(matrix)):
+    for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             matrix_div[i][j] = round((matrix[i][j] / div), 2)
-            
+
     return matrix_div
