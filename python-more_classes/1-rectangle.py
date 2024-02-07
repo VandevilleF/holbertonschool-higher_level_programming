@@ -5,6 +5,8 @@ A class Rectangle that defines a rectangle
 width must be an integer, width need to be less than 0
 height must be an integer, height need to be less than 0
 """
+
+
 class Rectangle:
     """
     A class Rectangle that defines a rectangle
@@ -46,6 +48,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-    def my_print(self):
-        print("{}{}".format(self.__height, self.__width))
