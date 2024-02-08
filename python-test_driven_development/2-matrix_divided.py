@@ -25,11 +25,12 @@ def matrix_divided(matrix, div):
     for row in matrix:
         if len(row) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
+        for elem in row:
+            if type(elem) is not int and type(elem) is not float:
+                raise TypeError(mat_err)
 
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
-            if type(j) is not int and type(j) is not float:
-                raise TypeError(mat_err)
             matrix_div[i][j] = round((matrix[i][j] / div), 2)
 
     return matrix_div
