@@ -21,4 +21,6 @@ def add_integer(a, b=98):
     if type(b) is not int:
         raise TypeError("b must be an integer")
 
-    return int(a + b)
+    sum_a_b = int(a) + int(b)
+
+    return sum_a_b
