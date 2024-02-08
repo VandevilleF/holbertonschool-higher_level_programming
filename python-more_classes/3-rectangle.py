@@ -49,9 +49,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def my_print(self):
-        print("{}{}".format(self.__height, self.__width))
-
     def area(self):
         return self.__height * self.__width
 
