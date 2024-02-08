@@ -28,6 +28,8 @@ def matrix_divided(matrix, div):
 
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
+            if type(j) is not int and type(j) is not float:
+                raise TypeError(mat_err)
             matrix_div[i][j] = round((matrix[i][j] / div), 2)
 
     return matrix_div
