@@ -13,24 +13,21 @@ def matrix_divided(matrix, div):
 
     mat_err = ("matrix must be a matrix (list of lists) of integers/floats")
 
-    if type(matrix) is not list or len(matrix) == 0:
+    if type(matrix) is not list:
         raise TypeError(mat_err)
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    matrix_div = [[0] * len(row) for row in matrix]
-
+    new_matrix = []
     for row in matrix:
         if len(row) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
-        for elem in row:
-            if type(elem) is not int and type(elem) is not float:
+        new_row = []
+        for value in row:
+            if type(value) is not int and type(value) is not float:
                 raise TypeError(mat_err)
-
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            matrix_div[i][j] = round((matrix[i][j] / div), 2)
-
-    return matrix_div
+            new_row.append(round(value / div, 2))
+        new_matrix.append(new_row)
+    return new_matrix
