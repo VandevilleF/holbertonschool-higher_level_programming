@@ -84,9 +84,11 @@ class Rectangle(Base):
 
     def display(self):
         """Displays a representation of the rectangle"""
-        for row in range(self.__height):
-            for line in range(self.__width):
-                print("#",end="")
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            print("{}".format(" " * self.__x) , end="")
+            print("{}".format("#" * self.__width),end="")
             print()
 
     def __str__(self):
