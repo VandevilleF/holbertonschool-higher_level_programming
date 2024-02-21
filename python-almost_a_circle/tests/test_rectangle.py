@@ -109,3 +109,7 @@ class test_rectangle(unittest.TestCase):
     def test_init_with_zero_width(self):
         with self.assertRaises(ValueError):
             rect = Rectangle(0, 10)
+
+
+if __name__ == "__main__":
+    unittest.main()
