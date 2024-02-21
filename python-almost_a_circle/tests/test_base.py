@@ -109,3 +109,6 @@ class test_base(unittest.TestCase):
             self.assertEqual(saved_data, [])
 
         os.remove(filename)
+
+if __name__ == "__main__":
+    unittest.main()

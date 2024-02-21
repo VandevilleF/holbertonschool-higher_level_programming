@@ -44,7 +44,7 @@ class test_square(unittest.TestCase):
 
     def test_string_representation(self):
         """Check the string representation of the Square instance"""
-        expected_output = "[Square] (9) 0/0 - 5"
+        expected_output = "[Square] (10) 0/0 - 5"
         self.assertEqual(str(self.square), expected_output)
 
     def test_update_method(self):
@@ -61,5 +61,5 @@ class test_square(unittest.TestCase):
 
     def test_to_dictionary_method(self):
         """Check the to_dictionary method of the Square"""
-        expected_dict = {'id': 10, 'x': 0, 'size': 5, 'y': 0}
+        expected_dict = {'id': 11, 'x': 0, 'size': 5, 'y': 0}
         self.assertEqual(self.square.to_dictionary(), expected_dict)
