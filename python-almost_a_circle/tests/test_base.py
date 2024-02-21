@@ -67,3 +67,23 @@ class test_base(unittest.TestCase):
     def test_to_many_arg_id(self):
         with self.assertRaises(TypeError):
             b = Base(1, 2)
+
+    def test_to_json_string_empty_list(self):
+        """Test to_json_string with empty list"""
+        result = Base.to_json_string([])
+        self.assertEqual(result, "[]")
+
+    def test_to_json_string_non_empty_list(self):
+        """Test to_json_string with non-empty list"""
+        result = Base.to_json_string([{'key': 'value'}])
+        self.assertEqual(result, '[{"key": "value"}]')
+
+    def test_from_json_string_empty_string(self):
+        """Test from_json_string with empty string"""
+        result = Base.from_json_string('')
+        self.assertEqual(result, [])
+
+    def test_from_json_string_non_empty_string(self):
+        """Test from_json_string with non-empty string"""
+        result = Base.from_json_string('[{"key": "value"}]')
+        self.assertEqual(result, [{'key': 'value'}])
