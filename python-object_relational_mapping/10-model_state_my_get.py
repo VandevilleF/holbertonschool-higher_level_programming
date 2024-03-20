@@ -17,7 +17,6 @@ if __name__ == "__main__":
 
     state_obj_n = session.query(State).filter(State.name.like(argv[4]))
 
-
     if state_obj_n.count() > 0:
         print("{}".format(state_obj_n[0].id))
     else:
