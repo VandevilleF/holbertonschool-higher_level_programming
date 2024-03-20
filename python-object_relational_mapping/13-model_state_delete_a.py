@@ -18,5 +18,6 @@ if __name__ == "__main__":
 
     for state in state_obj_a.all():
         session.delete(state)
+
     session.commit()
     session.close()
