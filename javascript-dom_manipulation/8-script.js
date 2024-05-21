@@ -9,4 +9,4 @@ fetch(url).then((response) => {
   .then((data) => {
     const hellodiv = document.getElementById('hello');
     hellodiv.textContent = data.hello;
-  })
+  });
