@@ -3,5 +3,6 @@ const changeText = document.getElementById('update_header');
 changeText.addEventListener('click', changeheader);
 
 function changeheader () {
-  changeText.textContent = 'New Header!!!';
+  const newtext = document.querySelector('header')
+  newtext.textContent = 'New Header!!!';
 }
