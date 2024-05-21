@@ -5,8 +5,8 @@ fetch(url).then((response) => {
     throw new Error(response.statusText);
   }
   return response.json();
-}) /*Gère le retour de la réponse et renvoi le contenu sous format json*/
+}) /* Gère le retour de la réponse et renvoi le contenu sous format json */
   .then((data) => {
     const charElement = document.getElementById('character');
     charElement.textContent = data.name;
-  }); /*Récupère le contenu par (key, value)*/
+  }); /* Récupère le contenu par (key, value) */
